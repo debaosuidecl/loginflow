@@ -1,0 +1,59 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+}
+.asseen img{
+    width: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    /* height: 120px; */
+    width: 100%;
+    max-width: 1000px;
+
+}
+
+.inputform{
+    max-width: 1000px;
+    /* margin: 20px auto; */
+
+}
+
+
+.autologintext{
+    font-family: sans-serif;
+    font-weight: 200;
+    padding: 0px 20px;
+}
+
+.inputform input{
+    width: 100%;
+    padding: 10px
+
+
+}
+
+.inputform input:disabled{
+    background: white;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
