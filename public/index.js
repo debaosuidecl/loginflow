@@ -37,29 +37,17 @@ async function onLoadHandler(){
         let email = queryParams.get('email');
         const carrier = queryParams.get('carrier');
         const redirect = queryParams.get('r');
-
         console.log({email, carrier})
-
         removeLoadScreen();
-
         addLogo(carrier|| "");
         if(!email){
             email = getRandomEmail();
         }
         setemail(email)
-
         await delay(3000);
-
+        console.log(redirect)
+        // return;
         window.location.href = redirect;
-
-
-
-
-
-        
-
-
-
 
 }
 

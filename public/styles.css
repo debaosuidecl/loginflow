@@ -5,7 +5,7 @@
 }
 
 .container{
-    padding: 20px;
+    /* padding: 20px; */
     margin: 20px auto;
 }
 
@@ -13,17 +13,34 @@
     display: flex;
     justify-content: center;
 }
+.asseen{
+    position: relative;
+}
 .asseen img{
     width: 100%;
 }
+.floaty{
+    position: absolute;
+    left: -28px;
+    top: -50px;
 
+
+
+}
+
+/* .floaty img{
+
+} */
 .hidden{
     display: none;
 }
-
+.auth{
+    padding: 20px;
+}
 .logo{
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 .logo img{
     /* height: 120px; */
@@ -57,3 +74,4 @@
     border: none;
     border-bottom: 1px solid #eee;
 }
+
