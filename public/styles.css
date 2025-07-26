@@ -1,77 +1,110 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-.container{
-    /* padding: 20px; */
-    margin: 20px auto;
+.container {
+  /* padding: 20px; */
+  margin: 0px auto 20px;
 }
 
-.loading{
-    display: flex;
-    justify-content: center;
+.loading {
+  display: flex;
+  justify-content: center;
 }
-.asseen{
-    position: relative;
+.asseen {
+  position: relative;
 }
-.asseen img{
-    width: 100%;
+.asseen img {
+  width: 100%;
 }
-.floaty{
-    position: absolute;
-    left: -28px;
-    top: -50px;
-
-
-
+.floaty {
+  position: absolute;
+  left: -28px;
+  top: -50px;
 }
-
+video {
+  width: 180%;
+}
 /* .floaty img{
 
 } */
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
-.auth{
-    padding: 20px;
+.auth {
+  padding: 0px 20px 20px;
 }
-.logo{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+.videocont {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
-.logo img{
-    /* height: 120px; */
-    width: 100%;
-    max-width: 1000px;
+.header {
+  display: flex;
+  padding-top: 20px;
+  margin: 0px;
+  align-items: flex-end;
+  font-family: Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* font-smoothing: */
+  text-rendering: optimizeLegibility;
+}
+.namedynamo {
+  font-weight: 500;
+  font-size: 16px;
+  transform: translateY(2.4px);
+  /* margin-bottom: -20px; */
 
+  padding: 0px;
+  padding-top: 10px;
+  margin: 0px;
+  font-family: Arial;
+}
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 5px 0px 20px;
+  /* padding: 20px; */
+}
+.logo img {
+  /* height: 120px; */
+  /* width: 100%; */
+
+  max-width: 70px;
+  transform: translateY(-2px);
 }
 
-.inputform{
-    max-width: 1000px;
-    /* margin: 20px auto; */
-
+.inputform {
+  max-width: 1000px;
+  /* margin: 20px auto; */
 }
 
-
-.autologintext{
-    font-family: sans-serif;
-    font-weight: 200;
-    padding: 0px 20px;
+.autologintext {
+  font-family: sans-serif;
+  font-weight: 200;
+  padding: 0px 20px;
 }
 
-.inputform input{
-    width: 100%;
-    padding: 10px
-
-
+.inputform input {
+  width: 100%;
+  padding: 10px;
 }
 
-.inputform input:disabled{
-    background: white;
-    border: none;
-    border-bottom: 1px solid #eee;
+.inputform input:disabled {
+  background: white;
+  border: none;
+  border-bottom: 1px solid #eee;
 }
 
+.answer {
+  text-align: center;
+  font-family: sans-serif;
+  color: #36d900;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}

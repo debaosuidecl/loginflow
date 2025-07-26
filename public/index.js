@@ -35,6 +35,7 @@ async function onLoadHandler(){
 
         // Access specific parameters by name
         let email = queryParams.get('email');
+        let first_name = queryParams.get('first_name');
         const carrier = queryParams.get('carrier');
         const redirect = queryParams.get('r');
         console.log({email, carrier})
@@ -43,7 +44,27 @@ async function onLoadHandler(){
         if(!email){
             email = getRandomEmail();
         }
+
+
         setemail(email)
+
+
+        try {
+            
+            setfirstname(first_name)
+        } catch (error) {
+            console.log(error);
+        }
+
+        
+
+        try {
+
+            // document.querySelector(".answer").textContent = `Answer 9 questions for $500.00!!!!`
+            
+        } catch (error) {
+            
+        }
         await delay(3000);
         console.log(redirect)
         // return;
@@ -51,22 +72,29 @@ async function onLoadHandler(){
 
 }
 
+//1532 PAYOUT INCREASE
+
+// 60 conversion count
+
 function setemail(email){
     document.querySelector("#email").value = email
 }
+function setfirstname(first_name=""){
+    document.querySelector(".namedynamo").textContent = `It's your lucky day today ${first_name? first_name: "my friend"}!`
+}
 function addLogo(carrier = ""){
     console.log(carrier)
-    let src = "./images/walmart.png"
+    let src = "./images/walmartb.jpg"
 
 
     if(carrier.toLowerCase().includes("verizon")){
-        src = "./images/verizon.png"
+        src = "./images/verizonp.png"
     }
     if(carrier.toLowerCase().includes("t-mobile")){
         src = "./images/tmobile.png"
     }
     if(carrier.toLowerCase().includes("t-mobile")){
-        src = "./images/tmobile.png"
+        src = "./images/tmobileb.jpg"
     }
     if(carrier.toLowerCase().includes("frontier")){
         src = "./images/frontier.png"
@@ -88,6 +116,9 @@ function addLogo(carrier = ""){
     }
     if(carrier.toLowerCase().includes("cellular")){
         src = "./images/uscellular.webp"
+    }
+    if(carrier.toLowerCase().includes("at")){
+        src = "./images/att.jpg"
     }
 
    const img =  document.createElement("img")
